@@ -58,35 +58,41 @@ export const Toolbar = () => {
       <div className="bg-white p-1 rounded-lg shadow-sm md:shadow-lg border border-gray-200 flex gap-1">
         <button
           onClick={() => setTemplate("harvard")}
-          className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all ${
+          className={`group flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all ${
             selectedTemplate === "harvard"
               ? "bg-gray-900 text-white"
               : "text-gray-600 hover:bg-gray-100"
           }`}
         >
-          <FileText size={16} />
-          <span className="hidden sm:inline cursor-pointer">Harvard</span>
+          <FileText size={16} className="group-hover:cursor-pointer" />
+          <span className="hidden sm:inline group-hover:cursor-pointer">
+            Harvard
+          </span>
         </button>
         <button
           onClick={() => setTemplate("modern")}
-          className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all ${
+          className={`group flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all ${
             selectedTemplate === "modern"
               ? "bg-emerald-600 text-white"
               : "text-gray-600 hover:bg-gray-100"
           }`}
         >
-          <Layout size={16} />
-          <span className="hidden sm:inline cursor-pointer">Modern</span>
+          <Layout size={16} className="group-hover:cursor-pointer" />
+          <span className="hidden sm:inline group-hover:cursor-pointer">
+            Modern
+          </span>
         </button>
       </div>
 
       {/* Download Button */}
       <button
         onClick={handlePrint}
-        className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow-sm md:shadow-lg font-semibold transition-colors text-sm"
+        className="group flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg shadow-sm md:shadow-lg font-semibold transition-colors text-sm"
       >
-        <Download size={18} />
-        <span className="hidden sm:inline cursor-pointer">Download PDF</span>
+        <Download size={18} className="group-hover:cursor-pointer" />
+        <span className="hidden sm:inline group-hover:cursor-pointer">
+          Download PDF
+        </span>
       </button>
     </div>
   );
