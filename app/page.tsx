@@ -6,14 +6,14 @@ import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
 export default function BuilderPage() {
   return (
-    <div className="md:h-screen w-full bg-gray-100 flex flex-col font-sans text-gray-900 overflow-hidden min-h-screen print:h-auto print:overflow-visible">
+    <div className="min-h-screen md:h-screen w-full bg-gray-100 flex flex-col font-sans text-gray-900 overflow-auto md:overflow-hidden print:h-auto print:overflow-visible">
       <div className="flex-1 flex flex-col max-w-[1920px] mx-auto w-full md:p-4 p-0 h-full print:p-0 print:m-0 print:max-w-none">
-        <main className="flex-1 bg-white md:rounded-2xl md:shadow-2xl flex flex-col md:flex-row relative md:min-h-0 h-auto md:overflow-hidden shadow-none print:shadow-none print:h-auto print:w-full print:max-w-none print:overflow-visible print:block">
+        <main className="flex-1 bg-white md:rounded-2xl md:shadow-2xl flex flex-col md:flex-row relative h-auto md:h-full md:overflow-hidden shadow-none print:shadow-none print:h-auto print:w-full print:max-w-none print:overflow-visible print:block">
           <div className="print:hidden">
             <Toolbar />
           </div>
 
-          <div className="print:hidden order-2 md:order-1 w-full md:w-1/2 lg:w-[45%] flex flex-col border-r border-gray-200 bg-white md:h-full h-auto print:hidden">
+          <div className="order-2 md:order-1 w-full md:w-1/2 lg:w-[45%] flex flex-col border-r border-gray-200 bg-white md:h-full h-auto print:hidden">
             <EditorPanel />
           </div>
 
