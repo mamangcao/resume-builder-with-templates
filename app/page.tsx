@@ -53,11 +53,11 @@ export default function BuilderPage() {
           </div>
 
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1">
+            <span className="flex text-xs lg:text-sm items-center gap-1">
               Developed by{" "}
               <a
                 href="https://mamangcao.vercel.app/"
-                className="font-semibold text-gray-700 hover:text-blue-600 transition-colors"
+                className="font-semibold text-xs lg:text-base text-gray-700 hover:text-blue-600 transition-colors"
               >
                 Abdul Haleem Mamangcao
               </a>
