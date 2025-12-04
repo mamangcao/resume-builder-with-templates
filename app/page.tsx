@@ -1,65 +1,90 @@
-import Image from "next/image";
+import { EditorPanel } from "@/components/builder/EditorPanel";
+import { PreviewPanel } from "@/components/builder/PreviewPanel";
+import { Toolbar } from "@/components/builder/Toolbar";
+import { Github, Linkedin } from "lucide-react";
+import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
-export default function Home() {
+export default function BuilderPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <div className="md:h-screen w-full bg-gray-100 flex flex-col font-sans text-gray-900 overflow-hidden min-h-screen print:h-auto print:overflow-visible">
+      <div className="flex-1 flex flex-col max-w-[1920px] mx-auto w-full md:p-4 p-0 h-full print:p-0 print:m-0 print:max-w-none">
+        <main className="flex-1 bg-white md:rounded-2xl md:shadow-2xl flex flex-col md:flex-row relative md:min-h-0 h-auto md:overflow-hidden shadow-none print:shadow-none print:h-auto print:w-full print:max-w-none print:overflow-visible print:block">
+          <div className="print:hidden">
+            <Toolbar />
+          </div>
+
+          <div className="print:hidden order-2 md:order-1 w-full md:w-1/2 lg:w-[45%] flex flex-col border-r border-gray-200 bg-white md:h-full h-auto print:hidden">
+            <EditorPanel />
+          </div>
+
+          <div className="order-3 md:order-2 flex-1 relative bg-gray-700 md:h-full h-[500px] print:h-auto print:bg-white print:overflow-visible">
+            <PreviewPanel />
+          </div>
+        </main>
+
+        {/* Footer */}
+        <footer className="no-print print:hidden shrink-0 mt-3 text-base text-gray-500 w-full flex flex-col md:flex-row justify-between items-center px-4 md:px-2 pb-2">
+          <div className="mb-2 md:mb-0 font-medium flex flex-wrap items-center justify-center gap-2">
+            <span>Built with</span>
+
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://nextjs.org"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 hover:bg-gray-100 border border-gray-200 transition-colors group"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              <SiNextdotjs className="text-black group-hover:text-black transition-colors" />
+              <span className="text-xs font-semibold text-gray-700 group-hover:text-black">
+                Next.js
+              </span>
+            </a>
+
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="https://tailwindcss.com"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 px-2 py-1 rounded-md bg-gray-50 hover:bg-gray-100 border border-gray-200 transition-colors group"
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+              <SiTailwindcss className="text-[#38bdf8] group-hover:text-[#0ea5e9] transition-colors" />
+              <span className="text-xs font-semibold text-gray-700 group-hover:text-[#0ea5e9]">
+                Tailwind CSS
+              </span>
+            </a>
+          </div>
+
+          <div className="flex items-center gap-6">
+            <span className="flex items-center gap-1">
+              Developed by{" "}
+              <a
+                href="https://mamangcao.vercel.app/"
+                className="font-semibold text-gray-700 hover:text-blue-600 transition-colors"
+              >
+                Abdul Haleem Mamangcao
+              </a>
+            </span>
+            <div className="flex gap-4 items-center">
+              <a
+                href="https://github.com/mamangcao"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-gray-900 transition-colors"
+                aria-label="GitHub"
+              >
+                <Github size={16} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/abdulhaleemmamangcao"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-700 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={16} />
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }
