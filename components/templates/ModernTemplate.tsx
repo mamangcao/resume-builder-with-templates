@@ -60,7 +60,7 @@ export const ModernTemplate: React.FC<Props> = ({ data, themeColor }) => {
   const colors = getThemeClasses(themeColor);
 
   return (
-    <div className="font-sans text-slate-800 bg-white relative min-h-[297mm] resume-content">
+    <div className="font-sans text-slate-800 bg-white relative min-h-[297mm] resume-content print:min-h-0 print:h-auto print:overflow-visible">
       <div
         className={`${colors.bg} border-b ${colors.border} p-8 pb-6 resume-item`}
       >
@@ -113,10 +113,10 @@ export const ModernTemplate: React.FC<Props> = ({ data, themeColor }) => {
         </div>
       </div>
 
-      <div className="p-8 pt-6 grid grid-cols-1 gap-6">
+      <div className="p-8 pt-6 grid grid-cols-1 gap-6 print:block print:p-6">
         {/* Experience Section */}
         {experience.length > 0 && (
-          <section>
+          <section className="print:mb-6">
             <h2
               className={`text-sm font-bold uppercase tracking-wider ${colors.title} mb-3 border-b ${colors.border} pb-1`}
             >

@@ -9,7 +9,7 @@ export const HarvardTemplate: React.FC<Props> = ({ data }) => {
   const { personalInfo, education, experience, projects, skills } = data;
 
   return (
-    <div className="resume-content font-serif text-black leading-tight text-sm p-8 h-full bg-white min-h-[297mm]">
+    <div className="resume-content font-serif text-black leading-tight text-sm p-8 bg-white min-h-[297mm] print:min-h-0 print:h-auto print:overflow-visible">
       <div className="text-center mb-4">
         <h1 className="text-2xl font-bold uppercase tracking-wide mb-1">
           {personalInfo.fullName}
