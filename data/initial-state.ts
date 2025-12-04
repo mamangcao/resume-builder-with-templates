@@ -20,7 +20,7 @@ export const INITIAL_DATA: ResumeData = {
 
 export const SAMPLE_DATA: ResumeData = {
   personalInfo: {
-    fullName: "Kharyi D. Xebec",
+    fullName: "Khayri D. Xebec",
     email: "khayri@mamangcao.com",
     phone: "(555) 123-4567",
     linkedin: "linkedin.com/in/khayri",
