@@ -14,7 +14,7 @@ export const EducationForm = () => {
         <h3 className="text-lg font-semibold text-gray-800">Education</h3>
         <button
           onClick={() => addSectionItem("education")}
-          className="flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800 font-medium"
+          className="flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800 font-medium cursor-pointer"
         >
           <Plus size={16} /> Add School
         </button>
