@@ -122,10 +122,5 @@ export const SAMPLE_DATA: ResumeData = {
       name: "Tools & Platforms",
       skills: "Git, Docker, AWS, CI/CD, Linux",
     },
-    {
-      id: generateId(),
-      name: "Databases",
-      skills: "PostgreSQL, MongoDB, Redis, MySQL",
-    },
   ],
 };
