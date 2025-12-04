@@ -19,15 +19,15 @@
 - **Print to PDF:** Optimized CSS layout for perfect A4 printing.
 
 **1.Core Framework & Language**
-**Next.js 14 (App Router):** The React framework used for structure, routing, and optimized build performance.
-**TypeScript:** Used for strict type safety (interfaces like ResumeData, Education) to prevent bugs and ensure data consistency between the Editor and Preview.
-**React:** The library for building the component-based UI (Split Screen, Editor, Preview).
+- **Next.js 14 (App Router):** The React framework used for structure, routing, and optimized build performance.
+- **TypeScript:** Used for strict type safety (interfaces like ResumeData, Education) to prevent bugs and ensure data consistency between the Editor and Preview.
+- **React:** The library for building the component-based UI (Split Screen, Editor, Preview).
 
 **2. Styling & UI**
-**Tailwind CSS:** Used for all styling, including the responsive grid layouts (mobile/desktop switching) and the generic UI components.
-**CSS Media Queries (@media print):** The "secret sauce" used to generate the PDF. Instead of heavy libraries, we used native CSS to format the HTML perfectly for A4 paper when printing.
-**Lucide React:** The icon library used for the UI elements (Trash bin, Plus sign, Download button).
-**React Icons (Simple Icons):** Used in the footer for brand logos (Next.js and Tailwind icons).
+- **Tailwind CSS:** Used for all styling, including the responsive grid layouts (mobile/desktop switching) and the generic UI components.
+- **CSS Media Queries (@media print):** The "secret sauce" used to generate the PDF. Instead of heavy libraries, we used native CSS to format the HTML perfectly for A4 paper when printing.
+- **Lucide React:** The icon library used for the UI elements (Trash bin, Plus sign, Download button).
+- **React Icons (Simple Icons):** Used in the footer for brand logos (Next.js and Tailwind icons).
 
 **3. State Management (The Brain)**
 **Zustand:** A lightweight state management library. We used it to:
@@ -36,4 +36,4 @@
 - Persist Middleware: Automatically saves the user's progress to the browser's LocalStorage so data isn't lost on refresh.
   
 **4. Utilities**
-**clsx & tailwind-merge:** Used to conditionally combine CSS classes (often used in the cn() utility helper).
+- **clsx & tailwind-merge:** Used to conditionally combine CSS classes (often used in the cn() utility helper).
