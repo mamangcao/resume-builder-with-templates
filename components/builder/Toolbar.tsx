@@ -2,6 +2,7 @@
 
 import { useResumeStore } from "@/stores/useResumeStore";
 import { Download, FileText, Layout, Palette } from "lucide-react";
+import { SiKofi } from "react-icons/si";
 
 export const Toolbar = () => {
   const {
@@ -83,6 +84,18 @@ export const Toolbar = () => {
           </span>
         </button>
       </div>
+
+       {/* Ko-fi Button */}
+      {/* Ko-fi brand color is roughly #FF5E5B, but we can use Tailwind's Rose or Red */}
+      <a
+        href="https://ko-fi.com/mamangcao"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-2 bg-[#FF5E5B] hover:bg-[#FF413D] text-white px-4 py-2 rounded-lg shadow-sm md:shadow-lg font-bold transition-colors text-sm"
+      >
+        <SiKofi size={18} />
+        <span className="hidden sm:inline">Send a Coffee</span>
+      </a>
 
       {/* Download Button */}
       <button

@@ -2,7 +2,7 @@ import { EditorPanel } from "@/components/builder/EditorPanel";
 import { PreviewPanel } from "@/components/builder/PreviewPanel";
 import { Toolbar } from "@/components/builder/Toolbar";
 import { Github, Linkedin } from "lucide-react";
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { SiKofi, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
 export default function BuilderPage() {
   return (
@@ -49,6 +49,15 @@ export default function BuilderPage() {
               <span className="text-xs font-semibold text-gray-700 group-hover:text-[#0ea5e9]">
                 Tailwind CSS
               </span>
+            </a>
+            {/* Ko-fi Link */}
+            <a
+              href="https://ko-fi.com/mamangcao"
+              target="_blank"
+              className="text-xs font-medium bg-rose-50 text-rose-600 border border-rose-100 px-2 py-1 rounded hover:bg-rose-100 transition-colors flex items-center gap-1"
+            >
+              <SiKofi size={10} />
+              <span>Buy Me a Coffee</span>
             </a>
           </div>
 
