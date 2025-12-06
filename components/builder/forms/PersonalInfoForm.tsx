@@ -56,14 +56,14 @@ export const PersonalInfoForm = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <input
             name="linkedin"
-            placeholder="LinkedIn URL"
+            placeholder="LinkedIn URL (Optional)"
             value={personalInfo.linkedin}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
           />
           <input
             name="github"
-            placeholder="Github URL"
+            placeholder="Github URL (Optional)"
             value={personalInfo.github}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"
@@ -72,7 +72,7 @@ export const PersonalInfoForm = () => {
 
         <input
           name="website"
-          placeholder="Portfolio URL"
+          placeholder="Portfolio URL (Optional)"
           value={personalInfo.website}
           onChange={handleChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none"

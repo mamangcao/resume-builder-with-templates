@@ -74,7 +74,7 @@ export const EducationForm = () => {
                 className="sm:col-span-2 w-full px-3 py-2 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-blue-500 outline-none transition-shadow"
               />
               <input
-                placeholder="GPA"
+                placeholder="GPA (Optional)"
                 value={edu.gpa}
                 onChange={(e) =>
                   updateSectionItem("education", edu.id, "gpa", e.target.value)

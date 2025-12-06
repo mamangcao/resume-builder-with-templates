@@ -34,7 +34,8 @@ export const HarvardTemplate: React.FC<Props> = ({ data }) => {
           <h2 className="text-sm font-bold uppercase border-b border-black mb-2">
             Education
           </h2>
-          {education.map((edu) => (
+          {/* Create a copy [...education] then reverse it */}
+          {[...education].reverse().map((edu) => (
             <div key={edu.id} className="mb-2 resume-item">
               <div className="flex justify-between font-bold">
                 <span>{edu.school}</span>
@@ -53,37 +54,36 @@ export const HarvardTemplate: React.FC<Props> = ({ data }) => {
         </div>
       )}
 
-      {/* Experience Section */}
+      {/* Experience - REVERSED */}
       {experience.length > 0 && (
         <div className="mb-4">
           <h2 className="text-sm font-bold uppercase border-b border-black mb-2">
             Experience
           </h2>
-          {experience.map((exp, index) => {
-            const prevExp = experience[index - 1];
+          {/* Create a copy [...experience] then reverse it */}
+          {[...experience].reverse().map((exp, index, arr) => {
+            // NOTE: Logic for grouping changes slightly.
+            // We check the PREVIOUS item in this REVERSED array.
+            const prevExp = arr[index - 1];
             const isSameCompany = prevExp && prevExp.company === exp.company;
 
             return (
               <div key={exp.id} className="mb-3 resume-item">
-                {/* Company Name: Only show if it's a NEW company */}
                 {!isSameCompany ? (
                   <div className="flex justify-between font-bold">
                     <span>{exp.company}</span>
                     <span>{exp.location}</span>
                   </div>
                 ) : (
-                  // Small spacer for visual separation between roles in same company
                   <div className="h-0.5"></div>
                 )}
-
-                {/* Position & Date: ALWAYS Italic, consistent for all roles */}
+                {/* ... Rest of item ... */}
                 <div className="flex justify-between italic mb-1">
                   <span>{exp.position}</span>
                   <span>
                     {exp.startDate} – {exp.endDate}
                   </span>
                 </div>
-
                 <ul className="list-disc list-outside ml-4 space-y-0.5">
                   {exp.description
                     .split("\n")
@@ -100,14 +100,15 @@ export const HarvardTemplate: React.FC<Props> = ({ data }) => {
         </div>
       )}
 
-      {/* Projects */}
+      {/* Projects - REVERSED */}
       {projects.length > 0 && (
         <div className="mb-4">
           <h2 className="text-sm font-bold uppercase border-b border-black mb-2">
             Projects
           </h2>
-          {projects.map((proj) => (
+          {[...projects].reverse().map((proj) => (
             <div key={proj.id} className="mb-2 resume-item">
+              {/* ... Content ... */}
               <div className="flex justify-between">
                 <span className="font-bold">
                   {proj.name}
