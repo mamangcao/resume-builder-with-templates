@@ -117,9 +117,12 @@ export const ModernTemplate: React.FC<Props> = ({ data, themeColor }) => {
         {/* Experience Section */}
         {experience.length > 0 && (
           <section>
-            <h2 className="...">Relevant Experience</h2>
+            <h2
+              className={`text-sm font-bold uppercase tracking-wider ${colors.title} mb-3 border-b ${colors.border} pb-1`}
+            >
+              Relevant Experience
+            </h2>
             <div className="space-y-5">
-              {/* REVERSE HERE */}
               {[...experience].reverse().map((exp, index, arr) => {
                 const prevExp = arr[index - 1];
                 const isSameCompany =
@@ -130,7 +133,6 @@ export const ModernTemplate: React.FC<Props> = ({ data, themeColor }) => {
                     key={exp.id}
                     className={`${isSameCompany ? "-mt-3 resume-item" : ""}`}
                   >
-                    {/* ... Content ... */}
                     {!isSameCompany && (
                       <div
                         className={`text-sm font-medium ${colors.subtitle} mb-2 mt-4`}
@@ -138,7 +140,6 @@ export const ModernTemplate: React.FC<Props> = ({ data, themeColor }) => {
                         {exp.company}, {exp.location}
                       </div>
                     )}
-                    {/* ... Rest of the card ... */}
                     <div className="flex justify-between items-baseline mb-1">
                       <h3
                         className={`font-bold text-slate-900 ${
@@ -173,9 +174,12 @@ export const ModernTemplate: React.FC<Props> = ({ data, themeColor }) => {
             {/* Projects */}
             {projects.length > 0 && (
               <section>
-                <h2 className="...">Projects</h2>
+                <h2
+                  className={`text-sm font-bold uppercase tracking-wider ${colors.title} mb-3 border-b ${colors.border} pb-1`}
+                >
+                  Projects
+                </h2>
                 <div className="space-y-3">
-                  {/* REVERSE HERE */}
                   {[...projects].reverse().map((proj) => (
                     <div key={proj.id} className="resume-item">
                       {/* ... Content ... */}
@@ -206,12 +210,14 @@ export const ModernTemplate: React.FC<Props> = ({ data, themeColor }) => {
             {/* Education */}
             {education.length > 0 && (
               <section>
-                <h2 className="...">Education</h2>
+                <h2
+                  className={`text-sm font-bold uppercase tracking-wider ${colors.title} mb-3 border-b ${colors.border} pb-1`}
+                >
+                  Education
+                </h2>
                 <div className="space-y-3">
-                  {/* REVERSE HERE */}
                   {[...education].reverse().map((edu) => (
                     <div key={edu.id} className="resume-item">
-                      {/* ... Content ... */}
                       <div className="font-bold text-slate-900 text-sm">
                         {edu.school}
                       </div>
