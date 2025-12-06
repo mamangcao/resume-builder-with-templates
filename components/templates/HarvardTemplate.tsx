@@ -34,7 +34,6 @@ export const HarvardTemplate: React.FC<Props> = ({ data }) => {
           <h2 className="text-sm font-bold uppercase border-b border-black mb-2">
             Education
           </h2>
-          {/* Create a copy [...education] then reverse it */}
           {[...education].reverse().map((edu) => (
             <div key={edu.id} className="mb-2 resume-item">
               <div className="flex justify-between font-bold">
@@ -60,10 +59,7 @@ export const HarvardTemplate: React.FC<Props> = ({ data }) => {
           <h2 className="text-sm font-bold uppercase border-b border-black mb-2">
             Experience
           </h2>
-          {/* Create a copy [...experience] then reverse it */}
           {[...experience].reverse().map((exp, index, arr) => {
-            // NOTE: Logic for grouping changes slightly.
-            // We check the PREVIOUS item in this REVERSED array.
             const prevExp = arr[index - 1];
             const isSameCompany = prevExp && prevExp.company === exp.company;
 
@@ -77,7 +73,6 @@ export const HarvardTemplate: React.FC<Props> = ({ data }) => {
                 ) : (
                   <div className="h-0.5"></div>
                 )}
-                {/* ... Rest of item ... */}
                 <div className="flex justify-between italic mb-1">
                   <span>{exp.position}</span>
                   <span>
@@ -108,7 +103,6 @@ export const HarvardTemplate: React.FC<Props> = ({ data }) => {
           </h2>
           {[...projects].reverse().map((proj) => (
             <div key={proj.id} className="mb-2 resume-item">
-              {/* ... Content ... */}
               <div className="flex justify-between">
                 <span className="font-bold">
                   {proj.name}
