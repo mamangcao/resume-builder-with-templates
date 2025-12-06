@@ -37,3 +37,16 @@
   
 **4. Utilities**
 - **clsx & tailwind-merge:** Used to conditionally combine CSS classes (often used in the cn() utility helper).
+
+**5. DEMO**
+Check out the live demo [here](https://resume-mamangcao.vercel.app)
+
+
+**6. License / Copyright**
+© 2025 **Abdul Haleem Mamangcao. All Rights Reserved.**
+Do not copy, redistribute, or reproduce any part of this project without permission.
+
+**7. Contact**
+For questions, suggestions, or collaborations, reach out via:
+**Email: abdulhaleem.mamangcao.@gmail.com**
+Visit my website [here](https://mamangcao.vercel.app)
