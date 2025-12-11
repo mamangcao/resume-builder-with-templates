@@ -74,7 +74,14 @@ export const HarvardTemplate: React.FC<Props> = ({ data }) => {
                   <div className="h-0.5"></div>
                 )}
                 <div className="flex justify-between italic mb-1">
-                  <span>{exp.position}</span>
+                  <span>
+                    {exp.position}
+                    {exp.employmentType && (
+                      <span className="font-normal not-italic text-xs ml-1">
+                        ({exp.employmentType})
+                      </span>
+                    )}
+                  </span>
                   <span>
                     {exp.startDate} – {exp.endDate}
                   </span>

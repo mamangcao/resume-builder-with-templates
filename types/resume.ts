@@ -25,6 +25,7 @@ export interface Experience {
   location: string;
   startDate: string;
   endDate: string;
+  employmentType: string;
   description: string;
 }
 

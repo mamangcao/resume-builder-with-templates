@@ -141,13 +141,21 @@ export const ModernTemplate: React.FC<Props> = ({ data, themeColor }) => {
                       </div>
                     )}
                     <div className="flex justify-between items-baseline mb-1">
-                      <h3
-                        className={`font-bold text-slate-900 ${
-                          isSameCompany ? "pl-0" : ""
-                        }`}
-                      >
-                        {exp.position}
-                      </h3>
+                      <div className="flex items-center gap-2">
+                        <h3
+                          className={`font-bold text-slate-900 ${
+                            isSameCompany ? "pl-0" : ""
+                          }`}
+                        >
+                          {exp.position}
+                        </h3>
+                        {exp.employmentType && (
+                          <span className="text-xs text-slate-500 font-normal border border-slate-200 px-1.5 py-0.5 rounded">
+                            {exp.employmentType}
+                          </span>
+                        )}
+                      </div>
+
                       <span className="text-xs font-semibold bg-slate-100 px-2 py-0.5 rounded text-slate-600">
                         {exp.startDate} – {exp.endDate}
                       </span>

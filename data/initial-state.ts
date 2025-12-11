@@ -49,6 +49,7 @@ export const SAMPLE_DATA: ResumeData = {
       location: "New York, NY",
       startDate: "2024",
       endDate: "Present",
+      employmentType: 'Full-time',
       description:
         "Developed UI components for a large SaaS dashboard.\nOptimized rendering performance across multiple modules.",
     },
@@ -59,6 +60,7 @@ export const SAMPLE_DATA: ResumeData = {
       location: "Remote",
       startDate: "2023",
       endDate: "2024",
+      employmentType: 'Contract',
       description:
         "Implemented microservices using Node.js.\nImproved API reliability and reduced server costs by 20%.",
     },
@@ -69,6 +71,7 @@ export const SAMPLE_DATA: ResumeData = {
       location: "San Francisco, CA",
       startDate: "2022",
       endDate: "2023",
+      employmentType: 'Full-time',
       description:
         "Built end-to-end features for an enterprise platform.\nIntegrated CI/CD pipelines and automated testing.",
     },

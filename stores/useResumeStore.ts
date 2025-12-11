@@ -89,6 +89,7 @@ export const useResumeStore = create<ResumeStore>()(
               location: "",
               startDate: "",
               endDate: "",
+              employmentType: "",
               description: "",
             };
           else if (section === "projects")
